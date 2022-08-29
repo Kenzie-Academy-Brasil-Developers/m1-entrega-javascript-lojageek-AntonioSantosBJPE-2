@@ -47,18 +47,19 @@ separateItens(listItens)
 // console.log(listFigures)
 
 
-let tagUlListPaintings = document.getElementById("list-paintings")
-let tagUlListActionFigures = document.getElementById ("list-action-figure")
-let tagLi = document.createElement("li")
-let tagDivCardInternoSuperior = document.createElement("div")
-let tagDivCardInternoInferior = document.createElement("div")
-let tagImgCardInternoSuperior = document.createElement("img")
-let tagPcardTitulo = document.createElement("p")
-let tagPcardValorProduto = document.createElement("p")
+
 
 function criarListaHtml (list , classHtml) {
     
     let tagUl = document.getElementById(classHtml)
+
+    
+    let tagLi = document.createElement("li")
+    let tagDivCardInternoSuperior = document.createElement("div")
+    let tagDivCardInternoInferior = document.createElement("div")
+    let tagImgCardInternoSuperior = document.createElement("img")
+    let tagPcardTitulo = document.createElement("p")
+    let tagPcardValorProduto = document.createElement("p")
     
     for (let i=0; i<list.length; i++){
     

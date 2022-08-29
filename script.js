@@ -26,6 +26,7 @@ addItens("./assets/img/actions/animewoman.jpg","animewoman",2000,"figures")
 addItens("./assets/img/actions/dragonballpersonagem.jpg","dragonballpersonagem",760,"figures")
 addItens("./assets/img/actions/starwarspersonagem.jpg","starwarspersonagem",210,"figures")
 
+
 //console.log(listItens)
 
 function separateItens (list){
@@ -45,31 +46,50 @@ separateItens(listItens)
 // console.log(listFrames)
 // console.log(listFigures)
 
-let teste =document.getElementById("list-paintings")
 
+let tagUlListPaintings = document.getElementById("list-paintings")
+let tagUlListActionFigures = document.getElementById ("list-action-figure")
+let tagLi = document.createElement("li")
+let tagDivCardInternoSuperior = document.createElement("div")
+let tagDivCardInternoInferior = document.createElement("div")
+let tagImgCardInternoSuperior = document.createElement("img")
+let tagPcardTitulo = document.createElement("p")
+let tagPcardValorProduto = document.createElement("p")
 
-for (let i=0; i<listFrames.length; i++){
-    teste.innerHTML += `<li class="card">
-<div class="card-interno-superior">
-    <img src="${listFrames[i].Image}" alt="${listFrames[i].Name}">
-</div>
-<div class="card-interno-inferior">
-    <p class="card-titulo">${listFrames[i].Name}</p>
-    <p class="card-valor-produto">R$ ${listFrames[i].Price}</p>
-</div>
-</li> `
+function criarListaHtml (list , classHtml) {
+    
+    let tagUl = document.getElementById(classHtml)
+    
+    for (let i=0; i<list.length; i++){
+    
+        tagLi = document.createElement("li")
+        tagLi.classList.add("card") 
+        tagUl.appendChild(tagLi)
+    
+        tagDivCardInternoSuperior = document.createElement("div")
+        tagDivCardInternoSuperior.classList.add("card-interno-superior")
+        tagLi.appendChild(tagDivCardInternoSuperior)
+    
+        tagDivCardInternoInferior = document.createElement("div")
+        tagDivCardInternoInferior.classList.add("card-interno-inferior")
+        tagLi.appendChild(tagDivCardInternoInferior)
+    
+        tagImgCardInternoSuperior = document.createElement("img")
+        tagDivCardInternoSuperior.appendChild(tagImgCardInternoSuperior)
+        tagImgCardInternoSuperior.setAttribute("src", list[i].Image)
+    
+        tagPcardTitulo = document.createElement("p")
+        tagPcardTitulo.classList.add("card-titulo")
+        tagDivCardInternoInferior.appendChild(tagPcardTitulo)
+        tagPcardTitulo.innerText=list[i].Name
+    
+        tagPcardValorProduto = document.createElement("p")
+        tagPcardValorProduto.classList.add("card-valor-produto")
+        tagDivCardInternoInferior.appendChild(tagPcardValorProduto)
+        tagPcardValorProduto.innerText= `R$ ${list[i].Price}`     
+    
+    }
 }
 
-
-let teste2 =document.getElementById("list-action-figure")
-for (let i=0; i<listFigures.length; i++){
-    teste2.innerHTML += `<li class="card">
-<div class="card-interno-superior">
-    <img src="${listFigures[i].Image}" alt="${listFigures[i].Name}">
-</div>
-<div class="card-interno-inferior">
-    <p class="card-titulo">${listFigures[i].Name}</p>
-    <p class="card-valor-produto">R$ ${listFigures[i].Price}</p>
-</div>
-</li> `
-}
+criarListaHtml(listFrames,"list-paintings")
+criarListaHtml(listFigures,"list-action-figures")

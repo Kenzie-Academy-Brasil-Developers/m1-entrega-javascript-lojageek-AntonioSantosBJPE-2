@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.container > .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    border-bottom: 2px solid hsl(0, 1%, 52%, 10%); 
+}
+
+.container > .menu > .buttons > .button-products {
+    width: 150px;
+    height: 40px;
+    background-color: hsl(205, 99%, 52%, 10%) ;
+    border: none;
+    color: #0A99FE;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+}
+        .container > .menu > .buttons > .button-products:hover {
+            background-color: #0A99FE;
+            color: white;
+            cursor: pointer;
+        }
+
+.container > .menu > .buttons > .button-contatos {
+    width: 150px;
+    height: 40px;
+    background-color: hsl(205, 99%, 52%, 10%) ;
+    border: none;
+    color: #0A99FE;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+        .container > .menu > .buttons > .button-contatos:hover {
+            background-color: #0A99FE;
+            color: white;
+            cursor: pointer;
+        }
+
+
+
+
+/* --------------------------------------------------------------------------------------*/
+.container > .corpo-principal > .corpo-list-paintings{
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container > .corpo-principal > .corpo-list-paintings > p{
+    font-size: 20px;
+}
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    overflow-x: auto;
+}
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card{
+    width: 207px;
+    height: 300px; /* O card não vai está com 300px de altura, apenas o bloco, para quando tiver
+    muitos elementos a barra de rolagem não ficar sobre os elementos, a soma do card interno superior +
+    o card interno inferior sim vai está com 275 px*/
+    background-color: white;
+    }
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-superior{
+    width: 207px;
+    height: 155px;
+    background-color: hsl(0, 1%, 52%, 30%);
+    border-radius: 10px 10px 0 0;
+}
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-superior > img{
+    width: 207px;
+    height: 155px;
+    border-radius: 10px 10px 0 0;
+}
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-inferior{
+    min-width: 207px;
+    min-height: 125px;
+    background-color: hsl(0, 1%, 52%, 10%);
+    border-radius: 0 0 10px 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-inferior > .card-titulo{
+   font-size: 20px;
+   color: #1B1B1B;
+}
+.container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-inferior > .card-valor-produto{
+    font-size: 16px;
+    color: #868383;
+ }
+
+
+/* --------------------------------------------------------------------------------------*/
+
+
+/* --------------------------------------------------------------------------------------*/
+
+.container > .corpo-principal > .corpo-list-action-figures{
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > p{
+    font-size: 20px;
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    overflow-x: auto;
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card{
+    width: 207px;
+    height: 300px; /* O card não vai está com 300px de altura, apenas o bloco, para quando tiver
+    muitos elementos a barra de rolagem não ficar sobre os elementos, a soma do card interno superior +
+    o card interno inferior sim vai está com 275 px*/
+    background-color: white;
+    }
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-superior{
+    width: 207px;
+    height: 155px;
+    background-color: hsl(0, 1%, 52%, 30%);
+    border-radius: 10px 10px 0 0;
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-superior > img{
+    width: 207px;
+    height: 155px;
+    border-radius: 10px 10px 0 0;
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-inferior{
+    min-width: 207px;
+    min-height: 125px;
+    background-color: hsl(0, 1%, 52%, 10%);
+    border-radius: 0 0 10px 10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-inferior > .card-titulo{
+   font-size: 20px;
+   color: #1B1B1B;
+}
+.container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-inferior > .card-valor-produto{
+    font-size: 16px;
+    color: #868383;
+ }
+
+
+/* --------------------------------------------------------------------------------------*/
+
+

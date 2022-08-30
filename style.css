@@ -100,6 +100,7 @@ body{
     width: 207px;
     height: 155px;
     border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
 
 .container > .corpo-principal > .corpo-list-paintings > .list-paintings > .card > .card-interno-inferior{
@@ -170,6 +171,7 @@ body{
     width: 207px;
     height: 155px;
     border-radius: 10px 10px 0 0;
+    object-fit: cover;
 }
 
 .container > .corpo-principal > .corpo-list-action-figures > .list-action-figures > .card > .card-interno-inferior{
